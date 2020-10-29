@@ -14,6 +14,22 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
+    <form
+      name="todolist"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <p>
+        <label>
+          todo <input type="text" name="todo" />
+        </label>
+      </p>
+      <input type="hidden" name="form-name" value="todo" />
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
